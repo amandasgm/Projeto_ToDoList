@@ -1,0 +1,199 @@
+/* GERAL */
+@font-face{
+    font-family: 'Lovan'; /* Nome da fonte  */
+    src: url(fontes/Lovan.ttf) format(truetype); /* pasta e formato da fonte */
+    font-weight: normal; /* finura da fonte */
+}
+@font-face {
+    font-family: 'Magiesta';
+    src: url(fontes/Magiesta.ttf) format(truetype);
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Garet';
+    src: url(fontes/Garet-Book.otf) format(truetype);
+    font-weight: normal;
+}
+
+:root{ /* cores e fontes padrão */
+    --verde_claro: #BADFDA; 
+    --verde:#7DB9B0;
+    --rosa_claro: #CD997B;
+    --terroso: #B07654;
+    --cinza_escuro: #292929;
+
+    --titulo1:'Lovan', cursive;
+    --titulo2:'Magiesta', cursive;
+    --textos: 'Garet', cursive;
+}
+
+*{ /* retira todas as margens e paddins pré definidos */
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--textos);
+    color: var(--cinza_escuro);
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/pexels-david-bartus-43782-4418713.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+button{
+    background-color: var(--rosa_claro);
+    color: black;
+    border: 2px solid white;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+button:hover{
+    background-color: var(--verde);
+}
+
+.erase_button:hover{
+    background-color: red;
+}
+
+input, select{
+    padding: 0.25rem;
+}
+
+/* #hide{
+    display: none;
+} */
+
+/*TO DO HEADER */
+
+.toDo_conteiner{
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid var(--terroso);
+    box-shadow: 4px 4px 10px var(--terroso);
+}
+
+.toDo_conteiner header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--terroso);
+   
+}
+
+header h1{
+    font-size: 60px;
+    font-family: var(--titulo2);
+    color: var(--terroso);
+}
+
+.toDo_form, .edit_form{
+    padding: 1rem;
+    border-bottom: 1px solid var(--terroso);
+}
+
+.toDo_form p, .edit_form p {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.form_control{
+    display: flex;
+}
+
+.form_control input{
+    margin-right: 10px;
+
+}
+
+.cancel_edit{
+    margin-top: 15px;
+
+}
+
+/*TO DO TOOLBAR*/
+
+.toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid var(--terroso);
+    display: flex;
+}
+
+.toolbar h4{
+    margin-bottom: 0.5rem;
+}
+
+.search{
+    border-right: 1px solid var(--terroso);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction:column ;
+}
+
+.search form{
+    display: flex; 
+}
+
+.search input{
+    width: 100%;
+    margin-right: .3rem;
+}
+
+.filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#filter_select{
+    flex: 1;
+}
+
+.hide{
+    display: none;
+}
+
+/* TO DO LIST  */
+.toDo_itens{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--terroso);
+    transition: 0.3s;
+}
+
+.toDo_itens h3{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.toDo_itens button{
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color: var(--verde_claro);
+}
+
+.done h3{
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+i{
+    color: white;
+}
